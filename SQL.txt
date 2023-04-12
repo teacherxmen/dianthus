@@ -1,0 +1,57 @@
+-- gitHub용 / Oracle 정리 소스
+--  p.189
+-- remote Repository 명 : oracleDBMS
+--
+-- 아래 git Bash 커맨드를 초기화(init) 부터 git push -u origin main 까지 정리!
+--
+-- [ git & gitHub 명령 정리 ] 
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+
+SELECT DISTINCT publisher FROM book;
+SELECT *  FROM book WHERE price BETWEEN  10000 AND 20000 ;
+SELECT *  FROM book WHERE price >= 10000 AND price <= 20000 ;
+SELECT *  FROM book WHERE publisher IN ( '굿스포츠', '대한미디어' );
+SELECT *  FROM book WHERE publisher NOT IN ( '굿스포츠', '대한미디어' );
+SELECT *  FROM book WHERE bookname LIKE '_구%';
+SELECT *  FROM book WHERE bookname LIKE '%축구%' AND price >= 20000;
+SELECT *  FROM book WHERE publisher = '굿스포츠' OR publisher = '대한미디어';
+SELECT *  FROM book ORDER BY bookname ;
+
+SELECT DISTINCT publisher FROM book;
+SELECT *  FROM book WHERE price BETWEEN  10000 AND 20000 ;
+SELECT *  FROM book WHERE price >= 10000 AND price <= 20000 ;
+SELECT *  FROM book WHERE publisher IN ( '굿스포츠', '대한미디어' );
+SELECT *  FROM book WHERE publisher NOT IN ( '굿스포츠', '대한미디어' );
+SELECT *  FROM book WHERE bookname LIKE '_구%';
+SELECT *  FROM book WHERE bookname LIKE '%축구%' AND price >= 20000;
+SELECT *  FROM book WHERE publisher = '굿스포츠' OR publisher = '대한미디어';
+SELECT *  FROM book ORDER BY bookname ;
+SELECT *  FROM book ORDER BY price DESC, publisher ASC;
+SELECT SUM (saleprice) FROM Orders ;
+SELECT SUM (saleprice) AS 총매출 FROM Orders ;
+SELECT SUM (saleprice) AS 총매출 FROM Orders WHERE custid =2 ;
+SELECT SUM (saleprice) AS 총매출, 
+       AVG (saleprice) AS 평균, 
+       MIN (saleprice) AS 최소,
+       SUM (saleprice) AS 최대,
+       COUNT (*) AS 투플수
+FROM Orders WHERE custid =2 ;
+SELECT COUNT (*) FROM Orders ;
